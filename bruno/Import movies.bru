@@ -1,0 +1,19 @@
+meta {
+  name: Import movies
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/movies/import?id={{validId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  id: {{validId}}
+}
+
+settings {
+  encodeUrl: true
+}

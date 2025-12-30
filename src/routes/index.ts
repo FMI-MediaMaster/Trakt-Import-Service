@@ -1,10 +1,8 @@
-import userController from '@controllers/user';
 import { Router } from 'express';
-import { createRouter } from '@media-master/express-crud-router';
+import traktController from '@controllers/trakt';
 
 const routes: Router = Router();
 
-routes.use('/users', createRouter(userController));
+routes.get('/:type/:method', traktController.handler);
 
 export default routes;
-
